@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: software.aws.rds.jdbc.mysql.Driver
+    url: jdbc:mysql:aws://localhost:3306/userdb
+
+    # Uncomment for non-AWS Mysql driver -- note: must also uncomment dependency in 'build.gradle'
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/userdb
+
+
+    # NOTE: DB credentials here (probably want to use env vars, shown below in comments)
+    username: root # ${DB_USER}
+    password: pass # ${DB_PASS}
+
+
+# Specify the port the server will run on
+server:
+  port: 9999
